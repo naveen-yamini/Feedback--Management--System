@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>💬 Feedback Management System</h1>
+        <p>Collect • Analyze • Manage Customer Feedback</p>
+    </header>
+
+    <nav>
+        <a href="#form">Give Feedback</a>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#feedbackList">View Feedback</a>
+    </nav>
+
+    <section class="container" id="form">
+
+        <div class="title">
+            <h2>Share Your Feedback</h2>
+            <p>Your opinion helps us improve our service.</p>
+        </div>
+
+        <form id="feedbackForm">
+
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="Enter your email" required>
+
+            <label for="category">Category</label>
+            <select id="category" required>
+                <option value="">Select Category</option>
+                <option value="Product">Product</option>
+                <option value="Service">Service</option>
+                <option value="Website">Website</option>
+                <option value="Support">Support</option>
+                <option value="Suggestion">Suggestion</option>
+            </select>
+
+            <label for="rating">Rating</label>
+            <select id="rating" required>
+                <option value="">Select Rating</option>
+                <option value="5">5 - Excellent</option>
+                <option value="4">4 - Very Good</option>
+                <option value="3">3 - Good</option>
+                <option value="2">2 - Poor</option>
+                <option value="1">1 - Very Poor</option>
+            </select>
+
+            <label for="feedback">Your Feedback</label>
+            <textarea id="feedback" rows="5"
+                placeholder="Write your feedback here..." required></textarea>
+
+            <button class="submit-btn" type="submit">
+                Submit Feedback
+            </button>
+
+        </form>
+
+        <p id="message"></p>
+
+    </section>
+
+    <section class="container" id="dashboard">
+
+        <div class="title">
+            <h2>📊 Admin Dashboard</h2>
+            <p>Quick overview of customer feedback</p>
+        </div>
+
+        <div class="dashboard">
+
+            <div class="card">
+                <div class="icon">📝</div>
+                <h3>Total Feedback</h3>
+                <p id="total">0</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">⭐</div>
+                <h3>Average Rating</h3>
+                <p id="average">0</p>
+            </div>
+
+            <div class="card">
+                <div class="icon">😊</div>
+                <h3>Positive Feedback</h3>
+                <p id="positive">0</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <section class="container" id="feedbackList">
+
+        <div class="title">
+            <h2>👥 Customer Feedback</h2>
+            <p>Recently submitted feedback</p>
+        </div>
+
+        <div id="feedbackContainer"></div>
+
+    </section>
+
+    <footer>
+        <h3>Feedback Management System</h3>
+        <p>© 2026 All Rights Reserved</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
